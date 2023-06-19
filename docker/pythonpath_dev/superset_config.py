@@ -17,7 +17,7 @@
 #
 # This file is included in the final Docker image and SHOULD be overridden when
 # deploying the image to prod. Settings configured here are intended for use in local
-# development environments. Also note that superset_config_docker.py is imported
+# development environments. Also note that superset_config.py is imported
 # as a final step as a means to override "defaults" configured here
 #
 import logging
@@ -109,7 +109,7 @@ WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 SQLLAB_CTAS_NO_LIMIT = True
 
 #
-# Optionally import superset_config_docker.py (which will have been included on
+# Optionally import superset_config.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden
 #
 try:

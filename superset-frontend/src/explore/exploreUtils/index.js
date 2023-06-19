@@ -262,7 +262,7 @@ export const exportChart = ({
     });
   }
 
-  SupersetClient.postForm(url, { form_data: safeStringify(payload) });
+  SupersetClient.postForm(url, { form_data: safeStringify(payload) }, '_self');
 };
 
 export const exploreChart = (formData, requestParams) => {
@@ -272,7 +272,7 @@ export const exploreChart = (formData, requestParams) => {
     allowDomainSharding: false,
     requestParams,
   });
-  SupersetClient.postForm(url, { form_data: safeStringify(formData) });
+  SupersetClient.postForm(url, { form_data: safeStringify(formData) }, '_self');
 };
 
 export const useDebouncedEffect = (effect, delay, deps) => {
